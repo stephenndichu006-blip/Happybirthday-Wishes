@@ -3,12 +3,10 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import checker from "vite-plugin-checker";
-
 import dns from "node:dns";
 
 dns.setDefaultResultOrder("verbatim");
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -17,6 +15,7 @@ export default defineConfig({
       typescript: true,
     }),
   ],
+  base: "/Happybirthday-Wishes/", // ✅ THIS IS THE NEW LINE
   server: {
     port: 3000,
     host: true,
